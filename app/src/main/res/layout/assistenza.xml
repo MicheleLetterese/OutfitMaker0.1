@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FED41E">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/homer"/>
+
+    <TextView
+        android:id="@+id/assistenza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assistenza"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <FrameLayout
+        android:id="@+id/f1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/assistenza"/>
+
+    <TextView
+    android:id="@+id/tv1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hai bisogno di assistenza? Contattaci!"
+    android:textSize="20dp"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/f1"
+    android:textStyle="bold" android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Se stai riscontrando problemi o hai domande, siamo qui per aiutarti! Contattaci al numero di assistenza clienti:"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <FrameLayout
+        android:id="@+id/f2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/tv2"/>
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/f2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Letterese Michele: "
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m.letterese@studenti.unisa.it"
+            android:textColor="#0023FF"
+            android:autoLink="email"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/f3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/l1"/>
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Il nostro team esperto è disponibile per fornire supporto immediato e risolvere ogni tua richiesta. Siamo qui per assicurarci che tu possa godere appieno dell'esperienza con la nostra app."
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/f3"/>
+
+    <FrameLayout
+        android:id="@+id/f4"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/tv3"/>
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grazie per la tua fiducia!"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/f4"/>
+
+</RelativeLayout>

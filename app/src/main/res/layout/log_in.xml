@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genera Outfit"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:hint="..."/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cognome:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextCognome"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:hint="..."/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mail:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextMail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:hint="..."/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:hint="..."
+        android:inputType="textPassword"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ripeti Password:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextPassword2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:hint="..."/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefono:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextTelefono"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:hint="..."
+        android:inputType="phone"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sesso:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maschio"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femmina"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non binario"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conferma Dati"
+            android:background="@color/pink"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

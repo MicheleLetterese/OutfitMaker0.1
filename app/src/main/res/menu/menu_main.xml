@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:id="@+id/menu1"
+        android:title="Home"/>
+
+    <item android:id="@+id/menu2"
+        android:title="Area Utente"/>
+
+    <item android:id="@+id/menu3"
+        android:title="Assistenza"/>
+
+    <item android:id="@+id/menu4"
+        android:title="Log In"/>
+
+</menu>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow">
+
+    <TextView
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genera Outfit"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+    />
+
+    <TextView
+        android:id="@+id/color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/go"
+        android:text="Colore:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/sceltaColore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:layout_below="@id/color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Rosso"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Blu"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Verde"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Nero"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Marrone"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Beige"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Rosso"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Blu"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Verde"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Bianco"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Azzurro"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Rosa"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Viola"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Lilla"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Multi"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/f1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/sceltaColore"/>
+
+    <TextView
+        android:id="@+id/stag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stagionalità:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@id/f1"
+    />
+    
+    <RadioGroup
+        android:id="@+id/radioButtonStag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stag"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="Invernale"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/black"/>
+
+        <RadioButton
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="Estivo"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/black"/>
+
+        <RadioButton
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="Mite"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/black"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/f2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/radioButtonStag"/>
+
+    <TextView
+        android:id="@+id/occasione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Occasione:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@id/f2"
+        />
+
+    <LinearLayout
+        android:id="@+id/sceltaOccasione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:layout_below="@id/occasione"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:buttonTint="@color/black"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:text="Casual"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <CheckBox
+            android:buttonTint="@color/black"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:text="Formale"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <CheckBox
+            android:buttonTint="@color/black"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:text="Sportivo"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/f3"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/sceltaOccasione"/>
+
+    <TextView
+        android:id="@+id/tipologia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipologia:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@id/f3"
+        />
+
+    <LinearLayout
+        android:id="@+id/sceltaTipologia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:layout_below="@id/tipologia"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="T-shirt"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Felpa"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Giacca"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Pantalon"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:buttonTint="@color/black"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Scarpe"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/f4"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/sceltaTipologia"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/f4"
+        android:text="Genera Outfit"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:background="@color/pink"
+        android:onClick="genera"/>
+
+</RelativeLayout>
