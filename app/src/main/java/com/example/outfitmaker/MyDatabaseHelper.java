@@ -2,6 +2,7 @@ package com.example.outfitmaker;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -126,4 +127,160 @@ public class MyDatabaseHelper extends SQLiteOpenHelper{
             Toast.makeText(context, "Aggiunta capo avvenuta con successo", Toast.LENGTH_SHORT).show();
         }
     }
+
+
+    //Stampa di tutti i dati
+
+    Cursor readAllDataUtente(){
+        String query="SELECT * FROM "+ TABLE_UTENTE;
+        SQLiteDatabase db=this.getReadableDatabase();
+
+        Cursor cursor=null;
+        if(db!=null){
+            cursor=db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    /* nel main
+    *
+    * MyDatabaseHelper db
+    * ArrayList<String> utente_id, nome, cognome, email, password;
+    *
+    *
+    * public void onCreate( Bundle savedIstanceState){
+    *   super.onCreate(savedIstanceState);
+    *   setContentView(R.layout.activity_main);
+    *
+    *   recycleView= findViewById(R.id.recycleView);
+    *   add_button= findViewById(R.id.add_button);
+    *   add_buttin=setOnClickListener((view)->{
+    *           Intent intent= new Intent (MainActivity.this, AddActivity.class);
+    *           startActivity(intent);
+    *   }
+    *
+    * });
+    *
+    * db= new MyDatabaseHelper(MainActivity.this);
+    * utente_id=new ArrayList<>();
+    * nome=new ArrayList<>();
+    * cognome=new ArrayList<>();
+    * email=new ArrayList<>();
+    * password=new ArrayList<>();
+    *
+    * storageDataInArrays();
+    * CustomAdapter= new CustomAdapter(MainActivity.this, nome, cognome, email, password);
+    * recyclerView.setAdapter(customAdapter);
+    * recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this);
+    * */
+
+
+
+    Cursor readAllDataArmadio(){
+        String query="SELECT * FROM "+ TABLE_ARMADIO;
+        SQLiteDatabase db=this.getReadableDatabase();
+
+        Cursor cursor=null;
+        if(db!=null){
+            cursor=db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    Cursor readAllDataCapo(){
+        String query="SELECT * FROM "+ TABLE_CAPO;
+        SQLiteDatabase db=this.getReadableDatabase();
+
+        Cursor cursor=null;
+        if(db!=null){
+            cursor=db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    Cursor readAllData(){
+        String query="SELECT * FROM "+ TABLE_OUTFIT;
+        SQLiteDatabase db=this.getReadableDatabase();
+
+        Cursor cursor=null;
+        if(db!=null){
+            cursor=db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+
+    //modifica utente
+    void updateData(String row_id, String nome, String surname, String email, String password){
+        SQLiteDatabase db= this.getWritableDatabase();
+        ContentValues cv= new ContentValues();
+
+        cv.put(COLUMN_NAME, nome);
+        cv.put(COLUMN_SURNAME, surname);
+        cv.put(COLUMN_EMAIL, email);
+        cv.put(COLUMN_PASSWORD, password);
+
+        long result=db.update(TABLE_UTENTE, cv, "id=?", new String[]{row_id});
+
+        if(result==-1){
+            Toast.makeText(context, "Aggiornamento fallito", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "Aggiornato con successo", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    /*
+    * Nel main
+    *
+    * Prima viene chiamato
+    * getAndSetIntentData
+    * MyDatabaseHelper db= new MyDatabaseHelper(UpdateActivity.this);
+    * e solo dopo
+    * db.updateData(id, nome, cognome, email, password);
+    * */
+
+    //Eliminazione utente
+
+    void deleteUser(String row_id){
+        SQLiteDatabase db= this.getWritableDatabase();
+        long result= db.delete(TABLE_UTENTE, "id=?", new String[]{row_id});
+        if(result==-1){
+            Toast.makeText(context,"Eliminazione fallita", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "Eliminazione avvenuta con successo", Toast.LENGTH_SHORT);
+        }
+    }
+
+
+    void deleteArmadio(String row_id){
+        SQLiteDatabase db= this.getWritableDatabase();
+        long result= db.delete(TABLE_ARMADIO, "id=?", new String[]{row_id});
+        if(result==-1){
+            Toast.makeText(context,"Eliminazione fallita", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "Eliminazione avvenuta con successo", Toast.LENGTH_SHORT);
+        }
+    }
+
+    void deleteCapo(String row_id){
+        SQLiteDatabase db= this.getWritableDatabase();
+        long result= db.delete(TABLE_CAPO, "id=?", new String[]{row_id});
+        if(result==-1){
+            Toast.makeText(context,"Eliminazione fallita", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "Eliminazione avvenuta con successo", Toast.LENGTH_SHORT);
+        }
+    }
+
+    void deleteOutfit(String row_id){
+        SQLiteDatabase db= this.getWritableDatabase();
+        long result= db.delete(TABLE_OUTFIT, "id=?", new String[]{row_id});
+        if(result==-1){
+            Toast.makeText(context,"Eliminazione fallita", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "Eliminazione avvenuta con successo", Toast.LENGTH_SHORT);
+        }
+    }
 }
+
